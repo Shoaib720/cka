@@ -4,7 +4,7 @@
 
 **Difficulty:** Intermediate  
 **Estimated Time:** 10–15 minutes  
-**Namespace:** `storage-lab`
+**Namespace:** `ns01`
 
 ---
 
@@ -15,7 +15,7 @@ A development team requires persistent storage for a lightweight utility pod. Yo
 ---
 
 ### Task 1 — Create the Namespace
-Create a namespace called `storage-lab`. All resources must be created in this namespace unless stated otherwise.  
+Create a namespace called `ns01`. All resources must be created in this namespace unless stated otherwise.  
 *(Note: PersistentVolumes are cluster-scoped.)*
 
 ---
@@ -35,12 +35,12 @@ Create a PersistentVolume with the following specifications:
 ---
 
 ### Task 3 — Create a PersistentVolumeClaim
-Create a PersistentVolumeClaim in the `storage-lab` namespace that binds to the PV created above:
+Create a PersistentVolumeClaim in the `ns01` namespace that binds to the PV created above:
 
 | Field | Value |
 |---|---|
 | Name | `lab-pvc` |
-| Namespace | `storage-lab` |
+| Namespace | `ns01` |
 | Requested Storage | `200Mi` |
 | Access Mode | `ReadWriteOnce` |
 | Storage Class | `manual` |
@@ -48,7 +48,7 @@ Create a PersistentVolumeClaim in the `storage-lab` namespace that binds to the 
 ---
 
 ### Task 4 — Deploy a Pod using the PVC
-Create a Pod in the `storage-lab` namespace with the following specifications:
+Create a Pod in the `ns01` namespace with the following specifications:
 
 | Field | Value |
 |---|---|

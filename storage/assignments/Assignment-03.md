@@ -4,7 +4,7 @@
 
 **Difficulty:** Intermediate  
 **Estimated Time:** 20–30 minutes  
-**Namespace:** `config-lab`
+**Namespace:** `ns03`
 
 ---
 
@@ -15,12 +15,12 @@ An application pod requires access to a configuration file and a database creden
 ---
 
 ### Task 1 — Create the Namespace
-Create a namespace called `config-lab`.
+Create a namespace called `ns03`.
 
 ---
 
 ### Task 2 — Create a ConfigMap
-Create a ConfigMap named `app-config` in the `config-lab` namespace containing a single key called `app.conf` with the following content:
+Create a ConfigMap named `app-config` in the `ns03` namespace containing a single key called `app.conf` with the following content:
 
 ```
 env=production
@@ -32,7 +32,7 @@ timeout=30s
 ---
 
 ### Task 3 — Create a Secret
-Create a Secret named `db-secret` in the `config-lab` namespace containing a single key called `db-password` with the value:
+Create a Secret named `db-secret` in the `ns03` namespace containing a single key called `db-password` with the value:
 
 ```
 S3cur3P@ssw0rd!
@@ -41,7 +41,7 @@ S3cur3P@ssw0rd!
 ---
 
 ### Task 4 — Deploy a Pod with Both Volumes Mounted
-Create a Pod in the `config-lab` namespace with the following specifications:
+Create a Pod in the `ns03` namespace with the following specifications:
 
 | Field | Value |
 |---|---|

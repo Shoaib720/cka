@@ -4,7 +4,7 @@
 
 **Difficulty:** Intermediate  
 **Estimated Time:** 20–30 minutes  
-**Namespace:** `dynamic-storage-lab`
+**Namespace:** `ns02`
 
 ---
 
@@ -18,7 +18,7 @@ A development team wants to move away from manually provisioned storage. Your ta
 ---
 
 ### Task 1 — Create the Namespace
-Create a namespace called `dynamic-storage-lab`.
+Create a namespace called `ns02`.
 
 ---
 
@@ -40,12 +40,12 @@ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisione
 ---
 
 ### Task 3 — Create a PersistentVolumeClaim
-Create a PersistentVolumeClaim in the `dynamic-storage-lab` namespace referencing the StorageClass above:
+Create a PersistentVolumeClaim in the `ns02` namespace referencing the StorageClass above:
 
 | Field | Value |
 |---|---|
 | Name | `dynamic-pvc` |
-| Namespace | `dynamic-storage-lab` |
+| Namespace | `ns02` |
 | Requested Storage | `100Mi` |
 | Access Mode | `ReadWriteOnce` |
 | Storage Class | `local-dynamic` |
@@ -55,7 +55,7 @@ Create a PersistentVolumeClaim in the `dynamic-storage-lab` namespace referencin
 ---
 
 ### Task 4 — Deploy a Pod using the PVC
-Create a Pod in the `dynamic-storage-lab` namespace with the following specifications:
+Create a Pod in the `ns02` namespace with the following specifications:
 
 | Field | Value |
 |---|---|
