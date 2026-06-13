@@ -32,6 +32,11 @@ Create a StorageClass with the following specifications:
 | Reclaim Policy | `Delete` |
 | Volume Binding Mode | `WaitForFirstConsumer` |
 
+Command to install the provisioner
+```bash
+kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.36/deploy/local-path-storage.yaml
+```
+
 ---
 
 ### Task 3 — Create a PersistentVolumeClaim
